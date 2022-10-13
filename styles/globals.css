@@ -1,26 +1,48 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap");
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   html {
-    color-scheme: dark;
+    font-family: Barlow, sans-serif;
   }
   body {
-    color: white;
-    background: black;
+    @apply dark:bg-dark-bag;
+  }
+}
+
+.css-rtrcn9-MuiTablePagination-root {
+  color: inherit !important;
+}
+.css-zylse7-MuiButtonBase-root-MuiIconButton-root.Mui-disabled {
+  color: inherit !important;
+}
+
+.css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root {
+  color: inherit !important;
+}
+
+.css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root {
+  color: inherit !important;
+}
+.css-11xur9t-MuiPaper-root-MuiTableContainer-root {
+  background-color: inherit !important;
+}
+.css-1ygcj2i-MuiTableCell-root.dark {
+  color: #fff !important;
+}
+@media screen and (max-width: 1023px) {
+  .sidebar {
+    z-index: 9;
+    height: 100%;
+    transform: translateX(-100%);
+    width: 65%;
+    position: fixed;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
   }
 }
